@@ -171,6 +171,10 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\OwnersController.cs" />
+    <Compile Include="Controllers\VeterinariansController.cs" />
+    <Compile Include="Controllers\VisitDetailsController.cs" />
+    <Compile Include="Controllers\VisitsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -242,6 +246,26 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Visits\Create.cshtml" />
+    <Content Include="Views\Visits\Delete.cshtml" />
+    <Content Include="Views\Visits\Details.cshtml" />
+    <Content Include="Views\Visits\Edit.cshtml" />
+    <Content Include="Views\Visits\Index.cshtml" />
+    <Content Include="Views\Veterinarians\Create.cshtml" />
+    <Content Include="Views\Veterinarians\Delete.cshtml" />
+    <Content Include="Views\Veterinarians\Details.cshtml" />
+    <Content Include="Views\Veterinarians\Edit.cshtml" />
+    <Content Include="Views\Veterinarians\Index.cshtml" />
+    <Content Include="Views\Owners\Create.cshtml" />
+    <Content Include="Views\Owners\Delete.cshtml" />
+    <Content Include="Views\Owners\Details.cshtml" />
+    <Content Include="Views\Owners\Edit.cshtml" />
+    <Content Include="Views\Owners\Index.cshtml" />
+    <Content Include="Views\VisitDetails\Create.cshtml" />
+    <Content Include="Views\VisitDetails\Delete.cshtml" />
+    <Content Include="Views\VisitDetails\Details.cshtml" />
+    <Content Include="Views\VisitDetails\Edit.cshtml" />
+    <Content Include="Views\VisitDetails\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

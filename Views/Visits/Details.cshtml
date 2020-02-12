@@ -1,0 +1,50 @@
+﻿@model ik090515_MIS4200.Models.Visits
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Visits</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Owners.petName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Owners.petName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.visitCost)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.visitCost)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.visitDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.visitDate)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.visitID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
