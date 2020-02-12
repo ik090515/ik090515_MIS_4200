@@ -4,12 +4,17 @@ using System.Linq;
 using System.Web;
 using ik090515_MIS4200.Models; // This is needed to access the models
 using System.Data.Entity; // this is needed to access the DbContext object
+using System.Data.Entity.ModelConfiguration.Conventions;
+
 namespace ik090515_MIS4200.DAL
 {
     public class MIS4200Context : DbContext // inherits from DbContext
     {
+        
         public MIS4200Context() : base("name=DefaultConnection")
         {
+            Database.SetInitializer(new MigrateDatabaseToLatestVersion<MIS4200Context,
+        ik090515_MIS4200.Migrations.MISContext.Configuration>("DefaultConnection"));
             // this method is a 'constructor' and is called when a new context is created
             // the base attribute says which connection string to use
         }
@@ -20,5 +25,14 @@ namespace ik090515_MIS4200.DAL
         public DbSet<Visits> Visits { get; set; }
         public DbSet<Veterinarians> Veterinarians { get; set; }
         public DbSet<VisitDetails> VisitDetails { get; set; }
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+            modelBuilder.Conventions.Remove<OneToManyCascadeDeleteConvention>();
+        }
+
+        
     }
+    
+
 }
